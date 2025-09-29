@@ -1,12 +1,14 @@
 #' Simulate Binomial Distribution and Plot
-#'  This function simulates a binomial distribution using rbinom and produces a barplot of relative frequencies.
+#'
+#' This function simulates a binomial distribution using rbinom and
+#' produces a barplot of relative frequencies.
+#'
 #' @param iter Number of iterations
 #' @param n Number of trials
-#' @param Probability of success
+#' @param p Probability of success
 #'
-#' @returns Relative frequencies as a table
+#' @return Relative frequencies as a table
 #' @export
-#'
 mybin <- function(iter, n, p) {
   y <- rbinom(iter, n, p)
   rel.freq <- table(factor(y, levels=0:n)) / iter

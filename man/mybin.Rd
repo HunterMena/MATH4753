@@ -2,8 +2,7 @@
 % Please edit documentation in R/mybin.R
 \name{mybin}
 \alias{mybin}
-\title{Simulate Binomial Distribution and Plot
- This function simulates a binomial distribution using rbinom and produces a barplot of relative frequencies.}
+\title{Simulate Binomial Distribution and Plot}
 \usage{
 mybin(iter, n, p)
 }
@@ -12,12 +11,12 @@ mybin(iter, n, p)
 
 \item{n}{Number of trials}
 
-\item{Probability}{of success}
+\item{p}{Probability of success}
 }
 \value{
 Relative frequencies as a table
 }
 \description{
-Simulate Binomial Distribution and Plot
- This function simulates a binomial distribution using rbinom and produces a barplot of relative frequencies.
+This function simulates a binomial distribution using rbinom and
+produces a barplot of relative frequencies.
 }
