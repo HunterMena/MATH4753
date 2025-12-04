@@ -1,0 +1,93 @@
+---
+title: "MATH4753Vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{MATH4753 Package Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r setup, include=FALSE}
+library(MATH4753)
+```
+
+Introduction
+
+The MATH4753 package provides several statistical and probability functions used in OU's MATH 4753 course.
+This vignette demonstrates four functions from the package—birthday(), mysum(), scatterhist(), and mybin()—and shows how to work with the included ddt dataset.
+
+1. The birthday() Function
+
+The birthday() function computes the probability that at least two people in a group share a birthday.
+
+```{r}
+birthday(20)
+birthday(1:30)
+```
+
+2. The mysum() Function
+
+mysum() returns the sum of integers from 1 to n.
+
+```{r}
+mysum(10)
+mysum(25)
+```
+
+3. The scatterhist() Function
+
+scatterhist() creates a scatterplot with marginal histograms.
+Below is an example using randomly generated data.
+
+
+```{r}
+set.seed(123)
+x <- rnorm(100)
+y <- rnorm(100)
+scatterhist(x, y)
+```
+
+4. The mybin() Function
+
+mybin() computes the binomial probability for given n, p, and k.
+
+
+```{r}
+mybin(iter = 1000, n = 10, p = 0.5)
+mybin(iter = 1000, n = 20, p = 0.25)
+```
+
+5. Dataset Example: ddt
+
+The package includes the ddt dataset, which contains environmental measurement data.
+We load and explore the dataset below.
+
+```{r}
+data(ddt)
+head(ddt)
+summary(ddt)
+```
+
+can see a simple relationship between variables:
+
+
+```{r}
+data(ddt)
+
+head(ddt)
+summary(ddt)
+
+plot(ddt$DDT,
+     main = "DDT Concentration Values",
+     xlab = "Observation Index",
+     ylab = "DDT Concentration")
+```
+
+Conclusion
+
+This vignette demonstrated four major functions from the package and showed how to load and explore the included ddt dataset.
+The package provides useful statistical tools for probability, simulation, and visualization.
+
+
+---

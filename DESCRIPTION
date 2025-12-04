@@ -1,20 +1,24 @@
 Package: MATH4753
 Type: Package
-Title: What the Package Does (Title Case)
+Title: MATH4753 Package
 Version: 0.1.0
-Authors@R: c(
+Authors@R: 
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      given = "Hunter",
+      family = "Mena",
+      email = "Hunter.E.Mena-1@ou.edu",
       role = c("aut", "cre")
     )
-  )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Custom statistical functions and visualization tools for MATH4753 coursework.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 RoxygenNote: 7.3.2
+VignetteBuilder: knitr
+Depends: 
+    R (>= 3.5)
